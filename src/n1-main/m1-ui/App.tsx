@@ -1,18 +1,22 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter, HashRouter} from 'react-router-dom';
+import {HashRouter} from 'react-router-dom';
 import {store} from '../m2-bll/store';
 import {Provider} from 'react-redux';
 import Pages from './routes/Pages';
+import Navbar from './routes/Navbar';
 
 function App() {
     return (
         <div className="App">
-            <BrowserRouter>
+            <HashRouter>
                 <Provider store={store}>
-                    <Pages/>
+                    <>
+                        <Navbar/>
+                        <Pages/>
+                    </>
                 </Provider>
-            </BrowserRouter>
+            </HashRouter>
         </div>
     );
 }
