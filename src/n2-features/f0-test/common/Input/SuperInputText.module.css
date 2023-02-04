@@ -1,34 +1,40 @@
 input {
-    padding: 12px;
-    font-size: 16px;
-    border-radius: 4px;
-    border: 1px solid gray;
-    width: 40%;
+  width: 40%;
+  padding: 12px;
+
+  font-size: 16px;
+
+  border: 1px solid gray;
+  border-radius: 4px;
 }
 .input:focus {
-    outline: none;
-    border-color: blue;
+  border-color: blue;
+  outline: none;
 }
 .inputWrapper {
-    margin-bottom: 12px;
-    position: relative;
+  position: relative;
+
+  margin-bottom: 12px;
 }
 .superInput {
-    padding: 14px;
-    font-size: 20px;
-    border-radius: 8px;
-    border: 2px solid gray;
-    width: 40%;
+  width: 40%;
+  padding: 14px;
+
+  font-size: 20px;
+
+  border: 2px solid gray;
+  border-radius: 8px;
 }
 .errorInput {
-    border-color: red;
+  border-color: red;
 }
 .errorInput:focus {
-    border-color: blue;
+  border-color: blue;
 }
 .error {
-    position: absolute;
-    bottom: -20px;
-    color: red;
-    font-size: 14px;
+  position: absolute;
+  bottom: -20px;
+
+  font-size: 14px;
+  color: red;
 }

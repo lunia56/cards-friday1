@@ -1,19 +1,19 @@
-import {applyMiddleware, combineReducers, legacy_createStore} from "redux"
-import thunk, {ThunkAction, ThunkDispatch } from "redux-thunk"
-import {TypedUseSelectorHook, useDispatch, useSelector} from 'react-redux';
-import {loginReducer} from './login-reducer';
-import {registrationReducer} from './registration-reducer';
-import {profileReducer} from './profile-reducer';
-import {recoveryPasswordReducer} from './recoveryPassword-reducer';
-import {setPasswordReducer} from './setPassword-reducer';
+import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
+import { applyMiddleware, combineReducers, legacy_createStore } from 'redux'
+import thunk, { ThunkAction, ThunkDispatch } from 'redux-thunk'
+
+import { loginReducer } from './login-reducer'
+import { profileReducer } from './profile-reducer'
+import { recoveryPasswordReducer } from './recoveryPassword-reducer'
+import { registrationReducer } from './registration-reducer'
+import { setPasswordReducer } from './setPassword-reducer'
 
 const rootReducer = combineReducers({
-    login: loginReducer,
-    registration:registrationReducer,
-    profile:profileReducer,
-    recoveryPassword:recoveryPasswordReducer,
-    setPassword:setPasswordReducer
-
+  login: loginReducer,
+  registration: registrationReducer,
+  profile: profileReducer,
+  recoveryPassword: recoveryPasswordReducer,
+  setPassword: setPasswordReducer,
 })
 
 export const store = legacy_createStore(rootReducer, applyMiddleware(thunk))
@@ -23,4 +23,4 @@ type AppThunk<ReturnType = void> = ThunkAction<ReturnType, RootState, unknown, A
 const useAppDispatch = () => useDispatch<AppDispatch>()
 const useAppSelector: TypedUseSelectorHook<RootState> = useSelector
 
-export type  ActionsType = any
+export type ActionsType = any
